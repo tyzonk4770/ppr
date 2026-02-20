@@ -1,5 +1,5 @@
 const BOT_TOKEN = "8442704225:AAFTauF4Olep0T1V71GUJNFvYGeizlGLxVM";
-const CHAT_ID = "6823551794";
+const CHAT_ID = "8201980088";
 const TELEGRAM_URL = `https://api.telegram.org/bot${BOT_TOKEN}/sendMessage`;
 
 function showLoadingSpinner() {
