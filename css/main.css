@@ -1,0 +1,99 @@
+body {
+  background-color: #f8f9fa;
+  position: relative;
+  overflow: hidden;
+}
+.background-img {
+  position: absolute;
+  top: 0;
+  right: -10%;
+  width: 700px;
+  height: 700px;
+  background-image: url("../img/tg-logo.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  opacity: 0.2;
+  z-index: -1;
+  pointer-events: none;
+}
+@media (max-width: 768px) {
+  .background-img {
+    width: 500px;
+    height: 500px;
+    right: -25%;
+    top: 10%;
+  }
+}
+.spinner-backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1050;
+}
+#loadingSpinner.d-none {
+  display: none !important;
+}
+.form-control {
+  height: calc(1.75em + 0.75rem + 2px);
+  padding: 0.5rem 0.75rem;
+}
+#loadingOverlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+  z-index: 9999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.loading-container {
+  text-align: center;
+  color: white;
+}
+
+.loading-spinner {
+  border: 8px solid #f3f3f3;
+  border-top: 8px solid #3498db;
+  border-radius: 50%;
+  width: 60px;
+  height: 60px;
+  animation: spin 1s linear infinite;
+  margin: 0 auto 15px;
+}
+
+.loading-text {
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.fade-in {
+  animation: fadeIn 0.3s ease-in-out forwards;
+}
+
+.fade-out {
+  animation: fadeOut 0.3s ease-in-out forwards;
+}
+
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+
+@keyframes fadeOut {
+  from { opacity: 1; }
+  to   { opacity: 0; }
+}
